@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:realtor/screens/auth/login_screen.dart';
+import 'package:realtor/screens/auth/register_screen.dart';
 import 'package:realtor/widgets/button_widget.dart';
 import 'package:realtor/widgets/social_button_widget.dart';
 
@@ -57,13 +59,22 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                         'Welcome!',
                         style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                       ),
+                      const Text('Login in to continue!'),
+
+                      const SizedBox(height: 20),
+
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CustomButtonWidget(
                             name: 'Login',
                             submit: () {
-                              print('Login Now');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const LoginScreen(),
+                                ),
+                              );
                             },
                             width: MediaQuery.of(context).size.width * 0.4,
                           ),
@@ -72,7 +83,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                             bgColor: Colors.white,
                             textColor: Colors.black,
                             submit: () {
-                              print('Register Now');
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const RegisterScreen(),
+                                ),
+                              );
                             },
                             width: MediaQuery.of(context).size.width * 0.4,
                           ),
