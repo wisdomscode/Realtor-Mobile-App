@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:realtor/screens/auth/register_screen.dart';
+import 'package:realtor/screens/features/home_screen.dart';
 import 'package:realtor/widgets/button_widget.dart';
 import 'package:realtor/widgets/custom_text_field_widget.dart';
 import 'package:realtor/widgets/custom_text_widget.dart';
@@ -27,6 +28,9 @@ class _LoginScreenState extends State<LoginScreen> {
     setState(() {
       name = emailController.text;
     });
+
+    // implement authenticatioin
+    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const HomeScreen()));
   }
 
   @override
