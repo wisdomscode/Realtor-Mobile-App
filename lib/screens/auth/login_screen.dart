@@ -30,7 +30,11 @@ class _LoginScreenState extends State<LoginScreen> {
     });
 
     // implement authenticatioin
-    Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => const HomeScreen()));
+    Navigator.of(context).pushReplacement(
+      MaterialPageRoute(
+        builder: (context) => const HomeScreen(),
+      ),
+    );
   }
 
   @override
