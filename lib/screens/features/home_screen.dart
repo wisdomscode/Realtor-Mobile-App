@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:realtor/models/dommy_properties.dart';
+import 'package:realtor/screens/auth/login_screen.dart';
+import 'package:realtor/screens/features/profile_screen.dart';
 import 'package:realtor/screens/features/property_detail_screen.dart';
 import 'package:realtor/screens/features/setting_screen.dart';
 import 'package:realtor/widgets/custom_text_field_widget.dart';
@@ -55,10 +57,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   break;
 
                 case 'profile':
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const ProfileScreen()));
                   break;
                 case 'logout':
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingScreen()));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => const LoginScreen()));
                   break;
               }
             },

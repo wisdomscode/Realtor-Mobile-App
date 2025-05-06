@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:realtor/bottom_nav_bar.dart';
 import 'package:realtor/screens/auth/register_screen.dart';
 import 'package:realtor/screens/features/home_screen.dart';
 import 'package:realtor/widgets/button_widget.dart';
@@ -29,10 +30,21 @@ class _LoginScreenState extends State<LoginScreen> {
       name = emailController.text;
     });
 
+    // Alert Message
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          "Success \nLogin Successfully",
+          style: TextStyle(color: Colors.green.shade700),
+        ),
+        backgroundColor: Colors.green.shade200,
+        duration: Duration(seconds: 2),
+      ),
+    );
     // implement authenticatioin
     Navigator.of(context).pushReplacement(
       MaterialPageRoute(
-        builder: (context) => const HomeScreen(),
+        builder: (context) => const BottomNavBarPage(),
       ),
     );
   }
