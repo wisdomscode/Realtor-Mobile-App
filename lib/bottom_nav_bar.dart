@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:realtor/screens/features/home_screen.dart';
+import 'package:realtor/screens/features/products_screen.dart';
 import 'package:realtor/screens/features/profile_screen.dart';
 import 'package:realtor/screens/features/setting_screen.dart';
 import 'package:realtor/screens/features/wish_list_screen.dart';
@@ -19,6 +20,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
   final pages = const [
     HomeScreen(),
     WishListScreen(),
+    ProductsScreen(),
     ProfileScreen(),
     SettingScreen(),
   ];
@@ -32,6 +34,7 @@ class _BottomNavBarPageState extends State<BottomNavBarPage> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
           BottomNavigationBarItem(icon: Icon(Icons.favorite), label: 'Favorite'),
+          BottomNavigationBarItem(icon: Icon(Icons.card_travel), label: 'Products'),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profile'),
           BottomNavigationBarItem(icon: Icon(Icons.settings), label: 'Settings'),
         ],
